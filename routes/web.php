@@ -19,6 +19,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,7 +27,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
- 
+URL::forceRootUrl('http://studenti.sum.ba/projekti/rwa/2022/gX');
 Route::view('/','welcome');
 Route::view('/index','index');
 Route::view('/prvastranica','prvastranica');
