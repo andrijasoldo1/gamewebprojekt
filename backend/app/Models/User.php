@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Database\Eloquent\Model;
   
 class User extends Authenticatable
 {
@@ -22,8 +23,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_type',
+        'broj',
     ];
-  
+
+protected $table = 'user_form';
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -33,7 +38,7 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-  
+    protected $connection = 'custom_connection';
     /**
      * The attributes that should be cast.
      *

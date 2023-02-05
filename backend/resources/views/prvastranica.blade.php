@@ -1,6 +1,6 @@
 <?php
 
-
+require_once 'database_connection.php';
 session_start();
 $user_id = $_SESSION['user_id'];
 
@@ -87,7 +87,8 @@ if(isset($message)){
         <div class="kartica"><a href="prvastranica.php">Proizvodi</a></div>
         <div class="kartica"><a href="drugastranica.html" id="rubrika3">O projektu</a></div>
         <div class="kartica"><a href="kosarica.php">Košarica<img src="/img/shopping-cart-svg-png-icon-download-28.png" width="20" height="20"></a></div>
-        <div class="kartica"><a href="pozdrav.html">Korisnici</a> </div>
+        <div class="kartica"><a href="korisnici">Korisnici</a> </div>
+        <div class="kartica"><a href="editor">Editor</a> </div>
                     <div class="kartica">
                             <a href="login.php" id="rubrika4">Odjava</a>
         </div>

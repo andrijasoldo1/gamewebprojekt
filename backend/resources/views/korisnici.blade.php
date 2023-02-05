@@ -1,3 +1,4 @@
+<@extends('layouts.app')
 <!DOCTYPE html>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,10 @@
                             <a href="login" id="rubrika4">Prijava</a>
         </div>
                         </div>
-                        <div id="pozdrav_text"><p>Dobro došli!<br><br>Uživajte u kupnji<br>Vaš #1 Gaming Webshop</p></div>       
+                              
+
+                       
+                        
                         <div id="footer">
                             <div id="footer1">
                             <h3>Kontaktirajte nas i na:</h3>

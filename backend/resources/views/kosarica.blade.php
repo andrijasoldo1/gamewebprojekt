@@ -33,7 +33,8 @@ if(isset($message)){
         <div class="kartica"><a href="prvastranica">Proizvodi</a></div>
         <div class="kartica"><a href="drugastranica" id="rubrika3">O projektu</a></div>
         <div class="kartica"><a href="kosarica">Košarica<img src="/img/shopping-cart-svg-png-icon-download-28.png" width="20" height="20"></a></div>
-        <div class="kartica"><a href=>Pozdrav!</a> </div>
+        <div class="kartica"><a href="korisnici">Korisnici</a> </div>
+        <div class="kartica"><a href="editor">Editor</a> </div>
                     <div class="kartica">
                             <a href="login" id="rubrika4">Prijava</a>
         </div>

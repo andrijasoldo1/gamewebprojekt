@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
@@ -19,7 +20,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-
+$conn = DB::connection();
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,7 +28,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-URL::forceRootUrl('http://studenti.sum.ba/projekti/rwa/2022/gX');
+
 Route::view('/','welcome');
 Route::view('/index','index');
 Route::view('/prvastranica','prvastranica');
@@ -35,6 +36,8 @@ Route::view('/drugastranica','drugastranica');
 Route::view('/login','login');
 Route::view('/register','register');
 Route::view('/kosarica','kosarica');
+Route::view('/korisnici','korisnici');
+Route::view('/editor','editor');
 
     /*Route::get('/',function(){
     \Illuminate\Support\Facades\DB::connection('mysql::write')->select();  )

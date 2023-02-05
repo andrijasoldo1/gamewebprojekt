@@ -15,7 +15,8 @@
         <div class="kartica"><a href="login">Proizvodi</a></div>
         <div class="kartica"><a href="drugastranica">O projektu</a></div>
         <div class="kartica"><a href="kosarica">Košarica<img src="/img/shopping-cart-svg-png-icon-download-28.png" width="20" height="20"></a></div>
-        <div class="kartica"><a href ="pozdrav.html">Korisnici</div>
+        <div class="kartica"><a href="korisnici">Korisnic!</a> </div>
+        <div class="kartica"><a href="editor">Editor</a> </div>
                     <div class="kartica">
                             <a href="login">Prijava</a>
         </div>

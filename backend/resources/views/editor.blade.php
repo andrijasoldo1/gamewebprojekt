@@ -7,7 +7,39 @@
     <title>Online gameshop GameWeb</title>
     <link rel="icon" type="image/x-icon" href="/img/zonelogo.png">
     <link rel="stylesheet"  href="/css/css.css">
-    
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+    <script src="{{ asset('vendor/tinymce/tinymce.min.js') }}"></script>
+    <script>
+   tinymce.init({
+       selector: 'textarea.form-control',
+       plugins: 'link code',
+       menubar: false,
+       toolbar: 'bold italic',
+   });
+</script>
+<script>
+  function tellJoke() {
+    alert("Why did the tomato turn red? Because it saw the salad dressing!");
+  }
+</script>
+<script>
+  function startGame() {
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var guess = parseInt(prompt("Guess a number between 1 and 100:"));
+    var attempts = 1;
+
+    while (guess !== randomNumber) {
+      if (guess < randomNumber) {
+        guess = parseInt(prompt("Too low! Guess again:"));
+      } else {
+        guess = parseInt(prompt("Too high! Guess again:"));
+      }
+      attempts++;
+    }
+
+    alert("You got it in " + attempts + " attempts!");
+  }
+</script>
 </head> 
 <body background="/img/pozadina.jpg">
     <div id="k_prvi">
@@ -22,7 +54,14 @@
                             <a href="login" id="rubrika4">Prijava</a>
         </div>
                         </div>
-                        <div id="pozdrav_text"><p>Dobro došli!<br><br>Uživajte u kupnji<br>Vaš #1 Gaming Webshop</p></div>       
+                         <div id="editor">
+                         <textarea class="form-control"></textarea>
+
+                         </div>
+                         <button onclick="tellJoke()">Tell me a joke!</button>
+                         <button onclick="startGame()">Start the game</button>
+                        
+
                         <div id="footer">
                             <div id="footer1">
                             <h3>Kontaktirajte nas i na:</h3>

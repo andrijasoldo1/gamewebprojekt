@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use App\Models\User;
 class LoginController extends Controller
 {
     /*
@@ -29,10 +29,10 @@ class LoginController extends Controller
     protected $redirectTo = RouteServiceProvider::HOME;
     protected function redirectTo(){
         if( Auth()->user()->role == 1){
-            return route('index.html');
+            return route('index');
         }
         elseif( Auth()->user() == 2){
-            return route('index.html');
+            return route('index');
         }
     }
     /**

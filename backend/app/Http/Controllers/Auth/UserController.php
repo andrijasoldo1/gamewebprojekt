@@ -27,11 +27,13 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-        $data = User::orderBy('id','DESC')->paginate(50);
-        return view('users.index',compact('data'))
+        $users = User::orderBy('id','DESC')->paginate(50);
+        return view('users.index',compact('user_form'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
     
+    
+
     /**
      * Show the form for creating a new resource.
      *
